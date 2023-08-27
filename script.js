@@ -1,81 +1,26 @@
 //VARIABLE DECLARATIONS
 // a prompt for how many chars they want
-var specialChars = [
-  "!",
-  "@",
-  "#",
-  "$",
-  "%",
-  "^",
-  "&",
-  "*",
-  "+",
-  "_",
-  "-",
-  "=",
-  "~",
-  "<",
-  ">",
-  "?",
-];
+
+var specialChars = [];
+for (i = 33; i < 48; i++) {
+  var char = String.fromCharCode(i);
+  specialChars.push(char);
+}
+
 //["+", "$", "~"];
 var numericChars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var lowercaseChars = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
-var uppercaseChars = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
-];
+
+var lowercaseChars = [];
+for (i = 97; i < 123; i++) {
+  var char = String.fromCharCode(i);
+  lowercaseChars.push(char);
+}
+
+var uppercaseChars = [];
+for (i = 65; i < 91; i++) {
+  var char = String.fromCharCode(i);
+  uppercaseChars.push(char);
+}
 
 //storing a reference to the button Generate Password
 var generateBtn = document.querySelector("#generate");
